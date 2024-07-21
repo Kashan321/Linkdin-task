@@ -66,7 +66,7 @@ function TaxResourceForm() {
 
     return (
         <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <h1 className="text-2xl font-bold mb-4">Add Tax</h1>
+            <h1 className="text-2xl  mb-4">Add Tax</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="flex items-center">
                     <input
