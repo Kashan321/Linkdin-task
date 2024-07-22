@@ -15,7 +15,6 @@ function TaxResourceForm() {
 
     useEffect(() => {
         const fetchItems = async () => {
-
             const data = apiResponse;
             setItems(data);
 
@@ -66,7 +65,7 @@ function TaxResourceForm() {
 
     return (
         <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <h1 className="text-2xl  mb-4">Add Tax</h1>
+            <h1 className="text-2xl mb-4">Add Tax</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="flex items-center">
                     <input
@@ -92,7 +91,6 @@ function TaxResourceForm() {
                             checked={formValues.applied_to === 'some'}
                             onChange={handleRadioChange}
                             className="mr-2"
-                            
                         />
                         Apply to specific items
                     </label>
@@ -183,7 +181,11 @@ function TaxResourceForm() {
                     </div>
                 </div>
                 <hr />
-                <button type="submit" className="bg-orange-500 text-white p-2 rounded ml-[59rem]" >
+                <button
+                    type="submit"
+                    className="bg-orange-500 text-white p-2 rounded ml-[59rem]"
+                    onClick={handleSubmit}
+                >
                     Apply tax to {items.filter(item => item.selected).length} item(s)
                 </button>
             </form>
